@@ -28,7 +28,7 @@ def generate_samples(
     output_dir: Union[str, Path],
     max_samples: Optional[int] = None,
     file_names: Optional[List[str]] = None,
-    model: Union[str, Path] = _DIR / "models" / "en_US-libritts_r-medium.pt",
+    model: Union[str, Path] = _DIR / "models" / "de_DE-mls-medium.pt",
     batch_size: int = 1,
     slerp_weights: Tuple[float, ...] = (0.5,),
     length_scales: Tuple[float, ...] = (0.75, 1, 1.25),
@@ -449,7 +449,7 @@ def main() -> None:
     parser.add_argument("text")
     parser.add_argument("--max-samples", required=True, type=int)
     parser.add_argument(
-        "--model", default=_DIR / "models" / "en_US-libritts_r-medium.pt"
+        "--model", default=_DIR / "models" / "de_DE-mls-medium.pt"
     )
     parser.add_argument("--batch-size", type=int, default=1)
     parser.add_argument("--slerp-weights", nargs="+", type=float, default=[0.5])
